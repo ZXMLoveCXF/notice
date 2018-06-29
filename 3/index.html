@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bootstrap3 Toast消息框插件|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+	<link rel="stylesheet" type="text/css" href="css/bootoast.css">
+	<style type="text/css">
+		h3{color: #D5D6E2;}
+	</style>
+</head>
+<body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>Bootstrap3 Toast消息框插件 <span>A Bootstrap 3 Toaster Plugin</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="http://www.htmleaf.com/jQuery/Layout-Interface/201708054668.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+		</header>
+		<div class="container">
+			<div class="row" style="padding: 2em 0;">
+				<h3>点击按钮查看Toast效果</h3>
+				<button id="info" class="btn btn-info">Info</button>
+				<button id="success" class="btn btn-success">Success</button>
+				<button id="warning" class="btn btn-warning">Warning</button>
+				<button id="danger" class="btn btn-danger">Danger</button>
+			</div>
+		</div>
+		<div class="related">
+		    <h3>如果你喜欢这个插件，那么你可能也喜欢:</h3>
+		    <a href="http://www.htmleaf.com/jQuery/Lightbox-Dialog/201611204207.html">
+			  <img src="related/1.jpg" width="300" alt="纯js跨浏览器响应式消息通知插件"/>
+			  <h3>纯js跨浏览器响应式消息通知插件</h3>
+			</a>
+			<a href="http://www.htmleaf.com/css3/css3donghua/201503061470.html">
+			  <img src="related/2.jpg" width="300" alt="66种基于animate.css的CSS消息提示动画效果"/>
+			  <h3>66种基于animate.css的CSS消息提示动画效果</h3>
+			</a>
+		</div>
+	</div>
+	
+	<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/bootoast.js"></script>
+	<script type="text/javascript">
+		$( "#info" ).click(function() {
+			  bootoast({
+			    message: 'This is an info toast message',
+			    position:'right-bottom'
+			  });
+			});
+
+			$( "#success" ).click(function() {
+			  bootoast({
+			    message: 'This is a success toast message',
+				 type: 'success',
+				 position:'right-bottom'
+			  });
+			});
+
+			$( "#warning" ).click(function() {
+			  bootoast({
+			    message: 'This is a warning toast message',
+				 type: 'warning',
+				 position:'right-bottom',
+				 timeout:2
+			  });
+			});
+
+			$( "#danger" ).click(function() {
+			  bootoast({
+			    message: 'This is a danger toast message',
+				 type: 'danger',
+				 position:'right-bottom',
+				 timeout:2
+			  });
+		});
+	</script>
+</body>
+</html>
